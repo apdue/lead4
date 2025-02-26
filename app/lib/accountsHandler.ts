@@ -24,33 +24,108 @@ export interface AccountsData {
   lastUpdated: string;
 }
 
+// In-memory storage for Vercel environment
+let inMemoryAccountsData: AccountsData | null = null;
+
 const accountsFilePath = path.join(process.cwd(), 'accounts.json');
 
-// Read accounts from JSON file
+// Check if we're in a Vercel serverless environment
+const isVercelServerless = process.env.VERCEL === '1';
+
+// Read accounts from JSON file or environment variables
 export function getAccountsData(): AccountsData {
-  try {
-    if (fs.existsSync(accountsFilePath)) {
-      const fileData = fs.readFileSync(accountsFilePath, 'utf8');
-      return JSON.parse(fileData) as AccountsData;
-    }
-  } catch (error) {
-    console.error('Error reading accounts file:', error);
+  // If we're in Vercel and have in-memory data, use that
+  if (isVercelServerless && inMemoryAccountsData) {
+    return inMemoryAccountsData;
   }
   
-  // Return default structure if file doesn't exist or is invalid
-  return {
+  try {
+    // Try to read from file first
+    if (fs.existsSync(accountsFilePath)) {
+      const fileData = fs.readFileSync(accountsFilePath, 'utf8');
+      const data = JSON.parse(fileData) as AccountsData;
+      
+      // Cache in memory if in Vercel environment
+      if (isVercelServerless) {
+        inMemoryAccountsData = data;
+      }
+      
+      return data;
+    }
+    
+    // If file doesn't exist, try to use environment variables
+    const envAccountId = process.env.FACEBOOK_ACCOUNT_ID;
+    const envAppId = process.env.FACEBOOK_APP_ID;
+    const envAppSecret = process.env.FACEBOOK_APP_SECRET;
+    const envToken = process.env.FACEBOOK_LONG_LIVED_TOKEN;
+    const envPageId = process.env.FACEBOOK_PAGE_ID;
+    const envPageName = process.env.FACEBOOK_PAGE_NAME;
+    const envPageToken = process.env.FACEBOOK_PAGE_TOKEN;
+    
+    if (envAccountId && envAppId && envAppSecret && envToken && envPageId && envPageName && envPageToken) {
+      const envData: AccountsData = {
+        accounts: [
+          {
+            id: envAccountId,
+            name: envAccountId,
+            appId: envAppId,
+            appSecret: envAppSecret,
+            shortLivedToken: envToken,
+            longLivedToken: envToken,
+            longLivedTokenExpiry: new Date(Date.now() + 60 * 24 * 60 * 60 * 1000).toISOString(), // 60 days from now
+            pages: [
+              {
+                id: envPageId,
+                name: envPageName,
+                access_token: envPageToken
+              }
+            ]
+          }
+        ],
+        currentAccountId: envAccountId,
+        lastUpdated: new Date().toISOString()
+      };
+      
+      // Cache in memory if in Vercel environment
+      if (isVercelServerless) {
+        inMemoryAccountsData = envData;
+      }
+      
+      return envData;
+    }
+  } catch (error) {
+    console.error('Error reading accounts data:', error);
+  }
+  
+  // Return default structure if all methods fail
+  const defaultData = {
     accounts: [],
     currentAccountId: '',
     lastUpdated: ''
   };
+  
+  // Cache in memory if in Vercel environment
+  if (isVercelServerless) {
+    inMemoryAccountsData = defaultData;
+  }
+  
+  return defaultData;
 }
 
-// Save accounts to JSON file
+// Save accounts to JSON file or memory
 export function saveAccountsData(data: AccountsData): void {
+  // Update in-memory data if in Vercel environment
+  if (isVercelServerless) {
+    inMemoryAccountsData = data;
+  }
+  
   try {
-    fs.writeFileSync(accountsFilePath, JSON.stringify(data, null, 2), 'utf8');
+    // Only write to file if not in Vercel environment
+    if (!isVercelServerless) {
+      fs.writeFileSync(accountsFilePath, JSON.stringify(data, null, 2), 'utf8');
+    }
   } catch (error) {
-    console.error('Error saving accounts file:', error);
+    console.error('Error saving accounts data:', error);
   }
 }
 
