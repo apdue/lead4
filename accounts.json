@@ -1,0 +1,48 @@
+{
+  "accounts": [
+    {
+      "id": "dry-first",
+      "name": "Dry First",
+      "appId": "2495054934033943",
+      "appSecret": "e97ea0a2c6da408f90311e2fe4c877d1",
+      "shortLivedToken": "EAAjdPT8JxhcBOZB1PgnkBUawXaTLE7PykYL1YRPAHJl2OrAhhvZBHZBhsfU2VhxyPMVoKskWYWGQ1VTiB9GBwpVmZARul5Q1h8mXZB7Ow3XIHsc6Ddp02Irkl0l2GbXBZBt9CQSeU61Iwqs7NL03xNhsdpWNckfqGnJSdItct7LG5sww6HdpX9yzC6CjPlayT1pyGDjaHXOqo0nS6qqUgKa8FJAhHno0TUwsgZD",
+      "longLivedToken": "EAAjdPT8JxhcBOZBkICG0VF7hJeQVDxPQDefXZA9gHFLviQEzoM8JyWmB37gsnd5zZC2kH8VlOg7aZBMiX5cB6e4hJ1ltKutna7SqSdgZCZCru7n2KZC5BMA5RLhO8nmwAKFIo2GLAcpNmAmZBuh10YjcY1qsrZAH2ZBSTFEbEu1AydWYZAHVVU5vWWkA9itmKJVtDaS",
+      "longLivedTokenExpiry": "2025-04-27T13:55:11.629Z",
+      "pages": [
+        {
+          "id": "100868156163733",
+          "name": "शिक्षा - Girdhari Sir",
+          "access_token": "EAAjdPT8JxhcBOZC9a8odQblFDJWPSUvF58Xwro5RnfvA0nZAOOAUQBIBSnTE0id0lwpNDWiJaE9TZCXzevkUYVIZAJCPyNmdwxYZA05yK6bZC9LMKDm2mqGYkIdve05n7SKKGZBtlBu1nuJlTm8YyhTN5ziwnKjz17AKQ3bDDTErPddzXQxCfSiBRIyoxuwhDcQ0mW9qLkZD"
+        },
+        {
+          "id": "101245016125462",
+          "name": "आयुर्वेदिक नुस्खे Anamika",
+          "access_token": "EAAjdPT8JxhcBOxMlzqPerpV3Swa8ZBACT0S6CIBjd7kc0tmWivKhkTLSbmAHZB3tlqXyKY2e3mZAZBMEnziT1EUCxntNPM6d2SbcaR9eeJGaTtL4NNMXw0Mh2NvIgJhaAVyLClegOk2u7OpbRuUUxXaqLWrNuUwdeF9hNBAyT8XrKFkCnhP4iwwkYcZAVJdnLyJxjFSEZD"
+        }
+      ]
+    },
+    {
+      "id": "dry-2",
+      "name": "Dry 2",
+      "appId": "2495054934033943",
+      "appSecret": "e97ea0a2c6da408f90311e2fe4c877d1",
+      "shortLivedToken": "EAAjdPT8JxhcBOwe0AKzUoNOsZBCkjoflZC8fh2QQOgR5M0CWCDC97GULw8hWmV3D0JArVxZB88W3ZBZA629AaAeR36e2UmSCfPIg1gF3CoTZBA58LzoCCbyv8sXqK6DVsyVJsLl0sEuG3fVuP56P7BxLPXzhNchWkwUbk5j9KgNZCpS1bcWLPztwxeNPZBojxaQi4CBCZAZB23GKrVTmeeiO61io0JNZBKLLmmYF6YZD",
+      "longLivedToken": "EAAjdPT8JxhcBO7LPDliBklfjHRMuY6K0iYqhWY5ni95eupUJYuMj24MZAGflK5eFdKzOcUUPspzn1phqNJZBCXEHZANA145aewVZB8xzmSN03YsFixcuSfSePn7rqZCO0Ylt57UfiN0A5xuyDx11iETIOGyTpEVelYO6qGnUNxZBLR5ggEVAdmmiY6a7TErrp2",
+      "longLivedTokenExpiry": "2025-04-27T14:28:45.581Z",
+      "pages": [
+        {
+          "id": "100868156163733",
+          "name": "शिक्षा - Girdhari Sir",
+          "access_token": "EAAjdPT8JxhcBOZBL98fC8lQzZCKZAJGJVZBNhNccEIu7h7UhOeCEQFLniKOXe2B3ZAnk94iLnJeKGzWB3FRZCzCm7MqOMeMs488gUxhDWaOn0i595pOeK3OSgeOcJlI6QN66ChiZAFh49JR4HrAwmRbtvE3nTUqC1obZAEZAvEJKWQQZBP5dHi9xysUEXjbix11SzlTYhbe64ZD"
+        },
+        {
+          "id": "101245016125462",
+          "name": "आयुर्वेदिक नुस्खे Anamika",
+          "access_token": "EAAjdPT8JxhcBO8FymR2AvOtxrcDXNDTggTvo6fEaFkU0IZAuW3jgJb3RkWyFIRVVGZBmZAmy1ajKZBZCdDyboXhB7zY7Tp9opKGNHQqsNyqKtuIbUvZCVbaQZCOxmRIiyYiFGLU8Fa5cjS1i1gO9LQ1SzSeOJ0470xz1mHI55CxMaNTojAQZCVqLAMHz0gDwgPWhNNh78jUZD"
+        }
+      ]
+    }
+  ],
+  "currentAccountId": "dry-2",
+  "lastUpdated": "2025-02-26T14:28:45.581Z"
+}
