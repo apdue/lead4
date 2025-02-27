@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import axios from 'axios';
-import { getTokens } from '@/app/lib/tokenStore';
-import { getCurrentAccount } from '@/app/lib/accountsHandler';
+import { getTokens } from '../../lib/tokenStore';
+import { getCurrentAccount } from '../../lib/accountsHandler';
 
 interface FacebookLeadFormsResponse {
   data: Array<{

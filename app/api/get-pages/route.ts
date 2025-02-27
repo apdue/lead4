@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import axios from 'axios';
-import { getTokens } from '@/app/lib/tokenStore';
-import { getCurrentAccount, updateAccountPage, getAccountById } from '@/app/lib/accountsHandler';
+import { getTokens } from '../../lib/tokenStore';
+import { getCurrentAccount, updateAccountPage, getAccountById } from '../../lib/accountsHandler';
 
 interface FacebookPagesResponse {
   data: Array<{

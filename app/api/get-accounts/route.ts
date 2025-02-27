@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { getAccountsData, getCurrentAccount, setCurrentAccount } from '@/app/lib/accountsHandler';
+import { getAccountsData, getCurrentAccount, setCurrentAccount } from '../../lib/accountsHandler';
 
 export async function GET(request: Request) {
   try {
