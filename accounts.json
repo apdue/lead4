@@ -41,8 +41,24 @@
           "access_token": "EAAjdPT8JxhcBO8FymR2AvOtxrcDXNDTggTvo6fEaFkU0IZAuW3jgJb3RkWyFIRVVGZBmZAmy1ajKZBZCdDyboXhB7zY7Tp9opKGNHQqsNyqKtuIbUvZCVbaQZCOxmRIiyYiFGLU8Fa5cjS1i1gO9LQ1SzSeOJ0470xz1mHI55CxMaNTojAQZCVqLAMHz0gDwgPWhNNh78jUZD"
         }
       ]
+    },
+    {
+      "id": "aachar",
+      "name": "Aachar",
+      "appId": "1049094106958878",
+      "appSecret": "da3443b0a4afd13b1a6fdd685ed0e1a6",
+      "shortLivedToken": "EAAO6JUGUzB4BO1a17OFiCUOzpZBP6KsSffS3OZAWozBERi8U1c8ZAleOL7dkJQflZAMWDEU11URYY1gSlvjuapjDbszPWTSNMqhTTzq9jE8hZB0N0CqFW1VIwzk51AvUqZClm3hZCWVX87nLJHjmLpf14z4qElWSLUKzusYwh5JzEEyDOXrZAxKsXkCsfkO39IJgMTVLp4GsHurQ2TZBEyolxkueoDFY1yjmDInUu0Xh9vTZA4DYsZCUlgZD",
+      "longLivedToken": "EAAO6JUGUzB4BO1a17OFiCUOzpZBP6KsSffS3OZAWozBERi8U1c8ZAleOL7dkJQflZAMWDEU11URYY1gSlvjuapjDbszPWTSNMqhTTzq9jE8hZB0N0CqFW1VIwzk51AvUqZClm3hZCWVX87nLJHjmLpf14z4qElWSLUKzusYwh5JzEEyDOXrZAxKsXkCsfkO39IJgMTVLp4GsHurQ2TZBEyolxkueoDFY1yjmDInUu0Xh9vTZA4DYsZCUlgZD",
+      "longLivedTokenExpiry": "2025-02-27T14:28:45.581Z",
+      "pages": [
+        {
+          "id": "448065431730618",
+          "name": "राजस्थान का Oraras Ghee",
+          "access_token": "EAAO6JUGUzB4BOw9l8ZA4UZBhZCVOcwtlDEZCUWF9PmBfXSPQABsHZBRP2H5Jxm8Y9f14ZATMIZCOBaVTMcEa4BSM4u8jUIsIntKTgOoccsfgd2Wqxfi7ch3tiHxfSX1CldptIZBdZB40XwOhH48kcZBJqTrfPr09rqSvab7tq2qbXxkQHtA8a4JyTXS1NVmNZBUV43iACthNbZCCOEbUrcDwzTQzgiYXT8Sd6SgljPcZCuNBiiHeF99d4"
+        }
+      ]
     }
   ],
-  "currentAccountId": "dry-2",
-  "lastUpdated": "2025-02-26T14:28:45.581Z"
+  "currentAccountId": "aachar",
+  "lastUpdated": "2024-02-27T14:28:45.581Z"
 }
