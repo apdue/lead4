@@ -30,14 +30,34 @@ A modern web application for efficiently managing and downloading Facebook lead 
    - `NEXT_PUBLIC_APP_URL`: Your Vercel app URL (e.g., https://leadmanager.vercel.app)
 
 6. Deploy the application
+7. After deployment, you'll need to upload your `accounts.json` file to the root directory (see [Account Setup](#account-setup) below)
 
 ### Post-Deployment Configuration
 
 After deployment, you'll need to:
 
-1. Set up your Facebook accounts in the application
-2. Add your Facebook App ID and App Secret
-3. Generate and add your Facebook access tokens
+1. Set up your Facebook accounts in the `accounts.json` file
+2. Upload the `accounts.json` file to your production server
+3. Ensure the file has the correct permissions
+
+## Account Setup
+
+This application uses Facebook account credentials to access lead form data. These credentials are stored in an `accounts.json` file that is not committed to the repository for security reasons.
+
+### Creating the accounts.json File
+
+1. Create an `accounts.json` file in the root directory of the project
+2. Add your Facebook account credentials to this file
+
+For detailed instructions on setting up the `accounts.json` file, see [ACCOUNTS_SETUP.md](./ACCOUNTS_SETUP.md).
+
+### For Development
+
+The application will automatically read from the `accounts.json` file in the root directory.
+
+### For Production
+
+For production environments, you need to ensure the `accounts.json` file is present on your production server. See [ACCOUNTS_SETUP.md](./ACCOUNTS_SETUP.md) for detailed deployment instructions.
 
 ## Local Development
 
