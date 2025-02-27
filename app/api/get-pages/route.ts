@@ -14,6 +14,7 @@ interface FacebookPagesResponse {
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const accountId = searchParams.get('accountId');
+  const refresh = searchParams.get('refresh') === 'true';
   
   // Get the account based on the accountId parameter or use the current account
   const account = accountId 
@@ -38,8 +39,8 @@ export async function GET(request: Request) {
   }
 
   try {
-    // First check if the account already has pages stored
-    if (account.pages && account.pages.length > 0) {
+    // First check if the account already has pages stored and refresh is not requested
+    if (!refresh && account.pages && account.pages.length > 0) {
       console.log(`Using ${account.pages.length} cached pages for account: ${account.name}`);
       return NextResponse.json({
         success: true,
@@ -47,7 +48,8 @@ export async function GET(request: Request) {
       });
     }
     
-    // If no cached pages, fetch from Facebook
+    // If no cached pages or refresh is requested, fetch from Facebook
+    console.log(`Fetching pages from Facebook for account: ${account.name}${refresh ? ' (refresh requested)' : ''}`);
     const response = await axios.get<FacebookPagesResponse>(
       `https://graph.facebook.com/me/accounts?access_token=${longLivedToken}`
     );
